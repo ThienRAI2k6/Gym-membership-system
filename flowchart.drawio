@@ -1,0 +1,144 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="rr-mjrHnjop9pERhRSm_">
+    <mxGraphModel dx="1016" dy="595" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uazW0BKH033YPiO3RGxw-2" edge="1" parent="1" source="uazW0BKH033YPiO3RGxw-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uazW0BKH033YPiO3RGxw-3" value="Extend (Inherit)">
+          <mxGeometry relative="1" x="-0.7" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="120" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uazW0BKH033YPiO3RGxw-6" edge="1" parent="1" source="uazW0BKH033YPiO3RGxw-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="uazW0BKH033YPiO3RGxw-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="260" />
+              <mxPoint x="300" y="260" />
+            </Array>
+            <mxPoint x="300" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uazW0BKH033YPiO3RGxw-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="abstract class Person:&lt;div&gt;&lt;hr&gt;&lt;div&gt;id: Protected String&lt;/div&gt;&lt;div&gt;name: Protected String&lt;br&gt;&lt;hr&gt;-public Person(id,name)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;-public abstract void DisplayInfo()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="130" x="130" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="uazW0BKH033YPiO3RGxw-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="class Trainer:&lt;div&gt;&lt;hr&gt;&lt;div&gt;&lt;div&gt;Specialty: private String&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;hr&gt;-public Trainer (id,name,speciality)&lt;/div&gt;&lt;div&gt;-@override public void displayInfo() print name and speciality&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="130" x="30" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-21" edge="1" parent="1" source="uazW0BKH033YPiO3RGxw-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;dashed=1;" target="Vf-rU_vmKq5L-Sslnta5-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="595" />
+              <mxPoint x="110" y="595" />
+              <mxPoint x="110" y="688" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uazW0BKH033YPiO3RGxw-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="class Member:&lt;div&gt;&lt;hr&gt;Membership:private &lt;b&gt;Membership&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;hr&gt;-public Member(id,name)&lt;/div&gt;&lt;div&gt;-public void SetMembership(membership)&lt;/div&gt;&lt;div&gt;-public void GetMembership()&lt;/div&gt;&lt;div&gt;-@override public void DisplayInfo() print name and ID&lt;/div&gt;&lt;div&gt;-public void checkIn():&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;if doesn&#39;t have membership announce it, else&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;return &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;b&gt;membership.checkin(this)&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="160" x="220" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="uazW0BKH033YPiO3RGxw-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="class Membership:&lt;div&gt;&lt;hr&gt;membershipClass:private String&lt;/div&gt;&lt;div&gt;basePrice:private Double&lt;/div&gt;&lt;div&gt;State: private &lt;b&gt;MembershipState&lt;/b&gt;&lt;/div&gt;&lt;div&gt;DIscountStratergy: private &lt;b&gt;discountStrategy&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;hr&gt;-public Membership(double Baseprice,discountStratergy strat)&lt;/div&gt;&lt;div&gt;-public SetState(boolean state)&lt;/div&gt;&lt;div&gt;-public double calculateFinalPrice() return &lt;b&gt;discountStrategy.applyDiscount(basePrice)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;-public void checkIn(): check State and announce if access is granted or not utilizing &lt;b&gt;HandleCheckIn()&lt;/b&gt; function of the &lt;b&gt;MembershipState&lt;/b&gt; interface.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="260" x="480" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="uazW0BKH033YPiO3RGxw-12" edge="1" parent="1" source="uazW0BKH033YPiO3RGxw-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.99;entryY=0.201;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.007;exitY=0.092;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;" target="uazW0BKH033YPiO3RGxw-7" value="utilized in">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_uXlnS3xlRmJ_hfXTfv4-3" edge="1" parent="1" source="uazW0BKH033YPiO3RGxw-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.995;entryY=0.938;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" target="uazW0BKH033YPiO3RGxw-7" value="checkIn() is &lt;br&gt;utilized here">
+          <mxGeometry relative="1" x="-0.1147" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="430" y="410" />
+              <mxPoint x="430" y="535" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-4" edge="1" parent="1" source="Vf-rU_vmKq5L-Sslnta5-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Vf-rU_vmKq5L-Sslnta5-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="400" />
+              <mxPoint x="930" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-5" edge="1" parent="1" source="Vf-rU_vmKq5L-Sslnta5-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="400" />
+              <mxPoint x="1120" y="400" />
+            </Array>
+            <mxPoint x="1120" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="interface DiscountStrategy&lt;div&gt;&lt;hr&gt;-public double applyDiscount(double price)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="830" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="class NoDiscount&lt;div&gt;&lt;hr&gt;-public double applyDiscount(double price)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="850" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="class StudentDiscount&lt;div&gt;&lt;hr&gt;-public double applyDiscount(double price*0.8)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="1060" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-6" edge="1" parent="1" source="Vf-rU_vmKq5L-Sslnta5-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Vf-rU_vmKq5L-Sslnta5-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="160" />
+              <mxPoint x="930" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-7" edge="1" parent="1" source="Vf-rU_vmKq5L-Sslnta5-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="Vf-rU_vmKq5L-Sslnta5-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="160" />
+              <mxPoint x="1120" y="160" />
+            </Array>
+            <mxPoint x="920" y="160" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="interface MembershipState&lt;div&gt;&lt;hr&gt;-public void HandleCheckIn(Member member, Membership context)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="160" x="830" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="class ActiveState&lt;div&gt;&lt;hr&gt;-public void HandleCheckIn(Member member, Membership context) print &quot;WELCOME.&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="160" x="850" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="class ActiveState&lt;div&gt;&lt;hr&gt;-public void HandleCheckIn(Member member, Membership context) print &quot;ACCESS DENIED.&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="180" x="1030" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-13" edge="1" parent="1" source="Vf-rU_vmKq5L-Sslnta5-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="uazW0BKH033YPiO3RGxw-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="770" y="90" />
+              <mxPoint x="770" y="270" />
+            </Array>
+            <mxPoint x="770" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-15" edge="1" parent="1" source="Vf-rU_vmKq5L-Sslnta5-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="uazW0BKH033YPiO3RGxw-8" value="creates a new...">
+          <mxGeometry relative="1" x="0.2558" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="610" y="90" />
+            </Array>
+            <mxPoint x="600" y="450.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="class MembershipFactory()&lt;div&gt;&lt;hr&gt;public static &lt;b&gt;Membership&lt;/b&gt; createMembership(String type, &lt;b&gt;DiscountStrategy&lt;/b&gt; discount): create a new Membership with the type and discount type specified, if basic set basePrice to 500, else if Premium set basePrice to 1000, else throw &lt;u&gt;error&lt;/u&gt;.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="180" x="335" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="class GymSystem&lt;div&gt;&lt;hr&gt;public List&amp;lt;Member&amp;gt; members&lt;/div&gt;&lt;div&gt;public List&amp;lt;Trainer&amp;gt; trainers&lt;/div&gt;&lt;div&gt;&lt;hr&gt;public GymSystem():create a new GymSystem object&lt;/div&gt;&lt;div&gt;public void addMember(Member member)&lt;/div&gt;&lt;div&gt;public void addTrainer(Trainer trainer)&lt;/div&gt;&lt;div&gt;public void runDemo()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="220" x="170" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-19" edge="1" parent="1" source="uazW0BKH033YPiO3RGxw-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.002;entryY=0.374;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" target="Vf-rU_vmKq5L-Sslnta5-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="711" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vf-rU_vmKq5L-Sslnta5-22" edge="1" parent="1" source="Vf-rU_vmKq5L-Sslnta5-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.009;entryY=0.564;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" target="uazW0BKH033YPiO3RGxw-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
