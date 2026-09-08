@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import strategies.DiscountStrategy;
-import strategies.StudentDiscount;
-
 // ==========================================
 // 1. EXCEPTIONS (Xử lý ngoại lệ - 10đ)
 // ==========================================
@@ -72,7 +69,22 @@ class Member extends Person {
 }
 
 // ==========================================
-// 3. STATE PATTERN (Trạng thái thẻ - 10đ)
+// 3. STRATEGY PATTERN (Tính toán giảm giá - 10đ)
+// ==========================================
+interface DiscountStrategy {
+    double applyDiscount(double price);
+}
+
+class NoDiscount implements DiscountStrategy {
+    public double applyDiscount(double price) { return price; }
+}
+
+class StudentDiscount implements DiscountStrategy {
+    public double applyDiscount(double price) { return price * 0.8; } // Giảm 20%
+}
+
+// ==========================================
+// 4. STATE PATTERN (Trạng thái thẻ - 10đ)
 // ==========================================
 interface MembershipState {
     void handleCheckIn(Member member, Membership context);
@@ -97,17 +109,12 @@ class ExpiredState implements MembershipState {
 class Membership {
     private double basePrice;
     private MembershipState state;
-    private List<DiscountStrategy> discountStrategy;
+    private DiscountStrategy discountStrategy;
 
     public Membership(double basePrice, DiscountStrategy discountStrategy) {
         this.basePrice = basePrice;
-        this.discountStrategy = new ArrayList<>();
-        this.discountStrategy.add(discountStrategy);
+        this.discountStrategy = discountStrategy;
         this.state = new ActiveState(); // Mặc định khi mua là Active
-    }
-
-    public void addDiscount(DiscountStrategy discountStrategy) {
-        this.discountStrategy.add(discountStrategy);
     }
 
     public void setState(MembershipState state) {
@@ -115,13 +122,7 @@ class Membership {
     }
 
     public double calculateFinalPrice() {
-        double totalDiscount = 0;
-
-        for (DiscountStrategy strategy : discountStrategy) {
-            totalDiscount += basePrice - strategy.applyDiscount(basePrice);
-        }
-
-        return basePrice - totalDiscount;
+        return discountStrategy.applyDiscount(basePrice);
     }
 
     public void checkIn(Member member) {
