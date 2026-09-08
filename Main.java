@@ -82,6 +82,9 @@ class NoDiscount implements DiscountStrategy {
 class StudentDiscount implements DiscountStrategy {
     public double applyDiscount(double price) { return price * 0.8; } // Giảm 20%
 }
+class ElderlyDiscount implements DiscountStrategy {
+    public double applyDiscount(double price) { return price * 0.7; } // Giảm 30%
+}
 
 // ==========================================
 // 4. STATE PATTERN (Trạng thái thẻ - 10đ)
