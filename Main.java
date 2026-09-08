@@ -1,3 +1,4 @@
+import strategies.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,20 +72,6 @@ class Member extends Person {
 // ==========================================
 // 3. STRATEGY PATTERN (Tính toán giảm giá - 10đ)
 // ==========================================
-interface DiscountStrategy {
-    double applyDiscount(double price);
-}
-
-class NoDiscount implements DiscountStrategy {
-    public double applyDiscount(double price) { return price; }
-}
-
-class StudentDiscount implements DiscountStrategy {
-    public double applyDiscount(double price) { return price * 0.8; } // Giảm 20%
-}
-class ElderlyDiscount implements DiscountStrategy {
-    public double applyDiscount(double price) { return price * 0.7; } // Giảm 30%
-}
 
 // ==========================================
 // 4. STATE PATTERN (Trạng thái thẻ - 10đ)
@@ -164,6 +151,10 @@ class GymSystem {
     public void addMember(Member member) {
         members.add(member);
         System.out.println("Added new member: " + member.name);
+    }
+    public void addTrainer(Trainer trainer) {
+        trainers.add(trainer);
+        System.out.println("Added new trainer: " + trainer.name);
     }
 
     // Demo hoạt động toàn hệ thống
